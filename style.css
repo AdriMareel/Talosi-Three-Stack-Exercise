@@ -1,0 +1,117 @@
+body{
+	font-family: 'Sofia Sans';
+	margin: 0;
+	padding: 0;
+    overflow-y: hidden;
+}
+
+.wrapper{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 98vh;
+	margin: 1vh;
+}
+
+.display{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	width: 40vw;
+	background: lightcyan;
+	border-radius: 20px;
+	height: 100%;
+}
+
+.stackDisplay{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.panel{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	width: 35vw;
+	height: 100%;
+}
+
+.controller{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	height: 55vh;
+}
+
+.select-stack{
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.select-stack div{
+	cursor: pointer;
+	padding: 10px;
+}
+
+.active{
+	background: lightblue;
+}
+
+.alert{
+	opacity: 0;
+	position: absolute;
+	width: 60%;
+	background-color : lightcoral;
+	color: white;
+	border-radius: 430px;
+	bottom: -50px;
+	padding: 0 10px;
+	left: 20%;
+    transition: opacity 1s ease-in-out, bottom 1s ease-in-out;
+}
+
+.shown{
+    bottom: 10px;
+    opacity: 1;
+}
+
+.controller input{
+	outline: none;
+	border: none;
+	border-bottom: 1px solid black;
+}
+
+.controller input::placeholder{
+    font-size: 16px;
+}
+
+.select-stack div{
+	border-radius: 10px;
+}
+
+.select-stack div:hover {
+	-webkit-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.2);
+	box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.2);
+}
+
+.title{
+	font-size: 2em;
+	font-weight: bold;
+}
+
+#add-element,#remove-element{
+	border: 1px solid black;
+	padding: 10px;
+	cursor: pointer;
+}
+
+#add-element:hover,#remove-element:hover{
+	-webkit-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.2);
+	box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.2);
+}
