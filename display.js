@@ -51,7 +51,6 @@ document.getElementById("stack3-clicked").addEventListener("click", function() {
 //ajout d'un élément dans une stack
 document.getElementById("add-element").addEventListener("click", function() {
     if(clickedStack == 0){
-        console.log("on est là mon gars");
         document.getElementById("alert-text").innerHTML = "Veuillez sélectionner une stack";
         document.getElementById("alert").classList.add("shown");
 
@@ -62,7 +61,7 @@ document.getElementById("add-element").addEventListener("click", function() {
     }
 
     if(document.getElementById("string-value").value === ""){
-        document.getElementById("alert-text").innerHTML = "Veuillez rentrer une valeur";
+        document.getElementById("alert-text").innerHTML = "Veuillez entrer une valeur";
         document.getElementById("alert").classList.add("shown");
 
         setTimeout(function(){
@@ -77,9 +76,14 @@ document.getElementById("add-element").addEventListener("click", function() {
 
 		document.getElementById("string-value").value = "";
 	}
+});
 
-
-
+//ajout d'un élément dans la stack avec entrée
+document.addEventListener("keydown", function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+		document.getElementById("add-element").click();
+    }
 });
 
 //retrait d'un élément dans la stack
